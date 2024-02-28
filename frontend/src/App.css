@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Koulen&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  *::-webkit-scrollbar{
+    display: none;
+  }
+  *{
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary-lg{
+    @apply bg-green hover:bg-dark-green transition-all duration-300 px-14 py-3 rounded-xl text-black font-bold text-lg
+  }
+  .btn-primary{
+    @apply bg-green border-2 border-green hover:bg-dark-green transition-all duration-300 px-8 py-2 w-1/2 rounded-xl text-black font-bold text-sm
+  }
+  .btn-stroke{
+    @apply bg-transparent border-2 border-black hover:bg-dark-green transition-all duration-300 px-8 py-2 w-1/2 rounded-xl text-black font-bold text-sm
+  }
+  .btn-like{
+    @apply bg-white/50 rounded-xl absolute w-10 h-10 hover:bg-white transition-all duration-300 -bottom-10 group-hover:bottom-2 right-2 hidden group-hover:flex items-center justify-center p-2
+  }
+  .card{
+    @apply w-full h-max flex flex-col relative items-end justify-end transition-all duration-300 cursor-pointer 
+  }
+  .card-img{
+    @apply rounded-xl h-max object-cover
+  }
+  .card-text{
+    @apply font-inter font-extrabold text-sm
+  }
+  .card-container{
+    @apply flex flex-col gap-3 items-start
+  }
+  .pattern{
+    @apply bg-pattern-new bg-no-repeat bg-right-top bg-cover
+  }
+  .grid-layout{
+    @apply w-full grid grid-cols-2 lg:grid-cols-4 gap-3
+  }
+  .grid-layout-2{
+    @apply w-full grid grid-cols-2 lg:grid-cols-4 gap-3 h-full overflow-scroll py-5
+  }
+  .bg-one{
+    @apply bg-bg-one bg-no-repeat bg-auto bg-left-top items-end
+  }
+  .bg-two{
+    @apply bg-bg-two bg-no-repeat bg-contain bg-right-top items-start
+  }
+  .nav{
+    @apply flex w-full justify-between items-center lg:p-10 p-5
+  }
+  .nav-btn-container{
+    @apply flex items-center gap-3 lg:w-1/5 w-1/2
+  }
+  .tab{
+    @apply w-5/6 lg:w-1/3 bg-secondary px-5 lg:px-10 py-4 flex items-center justify-between fixed bottom-5 rounded-2xl
+  }
+  .tab-btn{
+    @apply btn-primary w-max px-3 lg:px-8 flex items-center gap-2 hover:border-dark-green
+  }
+  .input{
+    @apply outline-none rounded-lg p-4 w-full ring-1 valid:text-dark-green invalid:text-red-500 invalid:ring-2 invalid:ring-red-500
+  }
+  .input-border{
+    @apply py-2 input bg-transparent border-2 border-slate-600/60
+  }
+  .input-comment{
+    @apply w-2/3 py-3 px-5 placeholder:text-white/70 placeholder:text-sm bg-transparent text-white/80 outline-none hover:bg-neutral-900 rounded-lg
+  }
+  .show-comment{
+    @apply  fixed inset-0 flex items-start translate-y-0
+  }
+  .hide-comment{
+    @apply fixed inset-0 hidden items-start
+  }
+  .input-container{
+    @apply w-full flex flex-col gap-2 items-start
+  }
+  .label{
+    @apply font-inter text-sm font-bold text-dark-green
+  }
+  .form{
+    @apply gap-10 flex flex-col items-start lg:w-1/3 w-full
+  }
+  .icon-btn{
+    @apply border hover:bg-slate-600/20 hover:border-slate-600/20 transition-all duration-300 border-slate-600/60 rounded-full p-2 cursor-pointer
+  }
+  .icon-8{
+    @apply w-8 h-8
+  }
+  .icon-5{
+    @apply w-5 h-5
+  }
+  .btn-dark-primary{
+    @apply btn-primary w-max text-sm bg-dark-green text-white border-dark-green py-3
+  }
+  .btn-dark-stroke{
+    @apply btn-stroke w-max text-sm border py-3 text-dark-green
+  }
+  .btn-dark{
+    @apply bg-transparent hover:bg-primary/70 transition-all duration-300 px-8 w-max cursor-pointer rounded-xl font-bold text-sm py-3 text-dark-green
+  }
+  .navigation{
+    @apply px-5 py-3 border-0 font-bold text-secondary/70 border-b-2 border-transparent transition-all duration-300 cursor-pointer hover:text-secondary
+  }
+  .active{
+    @apply border-secondary text-secondary
+  }
+  .foto{
+    @apply card-img h-40 rounded-none transition-all duration-300 hover:scale-110
+  }
+  .modal-bg{
+    @apply bg-slate-600/60 fixed px-5 inset-0 z-20 w-full h-screen flex items-center justify-center
+  }
+  .modal{
+    @apply w-full md:w-1/3 rounded-lg p-4 bg-white flex flex-col gap-5
+  }
+}
